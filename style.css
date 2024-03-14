@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'VT323', monospace;
+  background-color: #000000; /* Dark background */
+  color: #00ff00; /* Green text */
+}
+
+body,
+.snake {
+  background-color: #000000; /* Dark background */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.speed-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.speed-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #00ff00;
+  border: none;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.speed-buttons button:hover {
+  background-color: #197919;
+}
+
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 15px);
+  grid-template-rows: repeat(20, 15px);
+  margin: 4px;
+}
+
+.game-border-1 {
+  border: #00ff00 solid 10px; /* Green border */
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #000000; /* Dark shadow */
+}
+
+.game-border-2 {
+  border: #197919  solid 8px; /* Red border */
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #000000; /* Dark shadow */
+}
+
+.game-border-3 {
+  border: #043d04 solid 30px; /* Blue border */
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 10px #000000; /* Dark shadow */
+}
+
+#instruction-text {
+  position: absolute;
+  font-size: 20px;
+  top: 60%;
+  color: #00ff00; /* Green text */
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 75px;
+  margin: 0;
+}
+
+.scores {
+  margin-top: 20px; /* Adjust the margin as needed */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure scores span full width */
+}
+
+#score {
+  color: #00ff00; /* Green text */
+}
+
+#score,
+#highScore {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#highScore {
+  color: #00ff00; /* Green text */
+  display: none;
+}
+
+.game-border-3,
+#logo {
+  background-color: #000000; /* Dark background */
+}
+
+.snake {
+  border: #00ff00 1px dotted; /* Green dotted border */
+}
+
+.food {
+  background-color: #00ff00; /* Green food color */
+  border: #00ff00 5px solid; /* Green border */
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
